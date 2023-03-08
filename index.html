@@ -18,15 +18,30 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles_mobile.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a href="./index.html" class="logo"
+        <a href="./index.html" class="logo"
             >Web<span class="first-logo text">Studio</span></a
           >
+          <button type="button" class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+            <svg class="nav-icon" width="32px" height="22px">
+              <use href="./images/icons.svg#icon-menu-hamburger"></use>
+            </svg>
+          </button>  
+          <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="8px" height="8px" class="icon">
+              <use href="./images/icons.svg#icon-modal-button"></use>
+            </svg>
+      </button>
+
+      <div class="mobile-menu">
+        <nav class="mobile navigation">
           <ul class="site-nav">
             <li class="item">
               <a href="./index.html" class="link current">Studio</a>
@@ -38,7 +53,71 @@
           </ul>
         </nav>
 
-        <address class="address">
+          <address class="mobile address">
+          <ul class="address-links">
+            <li class="item">
+              <a href="tel:+110001111111" class="number address-link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="item">
+              <a href="mailto:info@devstudio.com" class="address-link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="mobile social-links list">
+                  <li class="icon-box">
+                    <a href="#" class="media-link">
+                      <svg width="24px" height="24px">
+                        <use
+                          href="./images/icons.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="icon-box">
+                    <a href="#" class="media-link">
+                      <svg width="24px" height="24px">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="icon-box">
+                    <a href="#" class="media-link">
+                      <svg width="24px" height="24px">
+                        <use
+                          href="./images/icons.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="icon-box">
+                    <a href="#" class="media-link">
+                      <svg width="24px" height="24px">
+                        <use
+                          href="./images/icons.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+      </div>
+    </div>
+          <nav class="desktop navigation">
+          <ul class="desktop site-nav">
+            <li class="item">
+              <a href="./index.html" class="link current">Studio</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link">Portfolio</a>
+            </li>
+            <li class="item"><a href="#" class="link">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <address class="desktop address">
           <ul class="address-links">
             <li class="item">
               <a href="mailto:info@devstudio.com" class="address-link"
@@ -52,6 +131,7 @@
             </li>
           </ul>
         </address>
+
       </div>
     </header>
     <main>
@@ -509,5 +589,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
